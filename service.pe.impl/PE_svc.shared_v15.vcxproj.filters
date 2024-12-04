@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003005a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003005b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_prec_optional">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003005c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="interface\PE_svc.crt.data.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\_prec\StdAfx.h">
+      <Filter>src\_prec_optional</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\PE_svc.manager.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\PE_svc.crt.data.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\_prec\StdAfx.cpp">
+      <Filter>src\_prec_optional</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PE_svc.manager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

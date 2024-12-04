@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-000000030081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-000000030082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_prec">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-000000030083}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\process.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\_prec\StdAfx.cpp">
+      <Filter>src\_prec</Filter>
+    </ClCompile>
+    <ClCompile Include="src\proc.perf.reg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\proc.perf.gpu.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\_prec\StdAfx.h">
+      <Filter>src\_prec</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\process.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\proc.perf.reg.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\proc.perf.gpu.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

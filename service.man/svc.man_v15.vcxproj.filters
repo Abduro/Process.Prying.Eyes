@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003002a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003002b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_prec_optional">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003002c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface\aux">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003002d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\aux">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003002e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface\crt">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-000000030029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\crt">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-000000030028}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="interface\svc.status.h">
+      <Filter>interface\aux</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\svc.cfg.h">
+      <Filter>interface\aux</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\svc.security.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\svc.service.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\svc.man.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\svc.setup.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\_prec\StdAfx.h">
+      <Filter>src\_prec_optional</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\svc.events.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\crt\svc.crt.data.h">
+      <Filter>interface\crt</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\crt\svc.crt.opts.h">
+      <Filter>interface\crt</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\crt\svc.crt.props.h">
+      <Filter>interface\crt</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\svc.state.h">
+      <Filter>interface\aux</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\svc.status.cpp">
+      <Filter>src\aux</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svc.cfg.cpp">
+      <Filter>src\aux</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svc.security.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svc.service.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svc.man.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svc.setup.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\_prec\StdAfx.cpp">
+      <Filter>src\_prec_optional</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crt\svc.crt.data.cpp">
+      <Filter>src\crt</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crt\svc.crt.opts.cpp">
+      <Filter>src\crt</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crt\svc.crt.props.cpp">
+      <Filter>src\crt</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svc.events.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\svc.state.cpp">
+      <Filter>src\aux</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

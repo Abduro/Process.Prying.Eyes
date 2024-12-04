@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-0000000300aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-0000000300ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_prec">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-0000000300ac}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\_prec\StdAfx.cpp">
+      <Filter>src\_prec</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.cert.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cert.storage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.sec.file.acc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.sec.privilege.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.sec.user.account.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.sec.provider.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\_prec\StdAfx.h">
+      <Filter>src\_prec</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.cert.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cert.storage.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.sec.file.acc.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.sec.privilege.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.sec.user.account.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.sec.provider.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

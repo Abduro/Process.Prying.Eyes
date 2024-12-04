@@ -1,0 +1,87 @@
+/*
+	Created by Tech_dog (ebontrop@gmail.com) on 9-Oct-2015 at 2:57:48pm, GMT+7, Phuket, Rawai, Friday;
+	This is Ebo Pack shared log library application event journal wrapper class implementation file.
+	-----------------------------------------------------------------------------
+	Adopted to v15 on 28-May-2018 at 0:20:22a, UTC+7, Phuket, Rawai, Monday;
+	Adopted to Process Prying Eyes project on 13-Feb-2023 at 01:48:54.1980263, UTC+7, Novosibirsk, Monday;
+*/
+#include "log.journal.h"
+
+using namespace shared::log;
+
+/////////////////////////////////////////////////////////////////////////////
+
+namespace shared { namespace log { namespace _impl {
+
+	CSyncObject& 
+		CEvent_GetSafeGuard(void) {
+		static CSyncObject  guard_;
+		return guard_;
+	}
+
+#define SAFE_LOCK_JOURNAL() SAFE_LOCK(CEvent_GetSafeGuard());
+
+	class CEvent_Writer {
+	public:
+		CEvent_Writer (const string_t& _lp_sz_src) : CEvent_Writer(_lp_sz_src.c_str()) {}
+		CEvent_Writer (LPCTSTR _lp_sz_src) : m_evt_src(_lp_sz_src) { if (this->m_evt_src.empty()) this->m_evt_src = _T("_fkn_shit"); }
+	public:
+		bool&  Verbose(void) { static bool b_verb = false; return b_verb; }
+
+		void   Write  (const WORD _w_evt_type, const string_t& _lp_sz_msg ) { this->Write(_w_evt_type, _lp_sz_msg.c_str()); }
+
+		void   Write  (const WORD _w_evt_type, LPCTSTR _lp_sz_msg)
+		{
+			SAFE_LOCK_JOURNAL();
+
+			LPCTSTR lp_sz_stings[2] = { NULL, NULL };
+
+			HANDLE hEventSource = ::RegisterEventSource(NULL, this->m_evt_src.c_str());
+			if (hEventSource)
+			{
+				lp_sz_stings[0] = this->m_evt_src.c_str();
+				lp_sz_stings[1] = _lp_sz_msg;
+				::ReportEvent(
+					hEventSource,
+					_w_evt_type ,
+					0,
+					0,
+					NULL,
+					_countof(lp_sz_stings),
+					0,
+					lp_sz_stings,
+					NULL
+				);
+
+				::DeregisterEventSource(hEventSource); hEventSource = nullptr;
+			}
+		}
+		void   Write_Ex(WORD _w_type, LPCTSTR _lp_sz_fmt, ...) {
+		}
+
+	private:
+		string_t m_evt_src;  // not good approach for duplication data of caller class;
+	};
+
+}}}
+
+using namespace shared::log::_impl;
+/////////////////////////////////////////////////////////////////////////////
+
+CEventJournal:: CEventJournal(LPCTSTR _lp_sz_src) : m_evt_src(_lp_sz_src) { if (this->m_evt_src.empty()) this->m_evt_src = __MODULE__; }
+CEventJournal::~CEventJournal(void) {}
+
+/////////////////////////////////////////////////////////////////////////////
+
+void  CEventJournal::Verbose (bool _b_value) { CEvent_Writer(this->m_evt_src.c_str()).Verbose() = _b_value; }
+
+/////////////////////////////////////////////////////////////////////////////
+
+void  CEventJournal::LogError(const TSysErrRef&  _err) const { CEvent_Writer(this->m_evt_src).Write(CEventType::e_error, _err.To_string()); }
+void  CEventJournal::LogError(LPCTSTR _lp_sz_fmt, ...) const { CEvent_Writer(this->m_evt_src).Write(CEventType::e_error, ...); }
+
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////

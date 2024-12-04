@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003003a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003003b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_prec">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003003c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resources">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003003d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resources\icons">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003003e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\service_exe_module.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\_prec\StdAfx.cpp">
+      <Filter>src\_prec</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PE_service_fake.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PE_service_out.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="interface\_out.manifest">
+      <Filter>interface</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\_prec\StdAfx.h">
+      <Filter>src\_prec</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PE_service_fake.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resources\PE_service.res.h">
+      <Filter>src\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PE_service_out.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\resources\icons\elle_s_eye_512px.ico">
+      <Filter>src\resources\icons</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\resources\PE_service.res.rc">
+      <Filter>src\resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

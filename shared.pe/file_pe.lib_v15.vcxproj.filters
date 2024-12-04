@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003009a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003009b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_prec">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003009c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\_prec\StdAfx.cpp">
+      <Filter>src\_prec</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shared_PE_CommonDefs.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shared_PE_File.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shared_PE_Tables.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shared_PE_Padding.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\_prec\StdAfx.h">
+      <Filter>src\_prec</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\Shared_PE_CommonDefs.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\Shared_PE_File.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\Shared_PE_Tables.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\Shared_PE_Padding.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

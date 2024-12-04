@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-000000030071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-000000030072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_prec">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-000000030073}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\_prec\StdAfx.cpp">
+      <Filter>src\_prec</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log.journal.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log.async.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log.csv.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\_prec\StdAfx.h">
+      <Filter>src\_prec</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\log.defs.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\log.journal.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\log.csv.async.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\log.csv.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

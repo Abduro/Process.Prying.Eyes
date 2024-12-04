@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003001a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003001b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_prec_optional">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003001c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="interface\shared._std_afx.h">
+      <Filter>src\_prec_optional</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.classes.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.sys.err.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.sys.sync.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.gen.path.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.cmd.ln.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.run.tpl.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.run.event.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.gen.hand.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\shared.raw.buf.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\shared._std_afx.cpp">
+      <Filter>src\_prec_optional</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.classes.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.sys.err.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.sys.sync.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.gen.path.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.cmd.ln.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.run.tpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.run.event.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.gen.hand.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shared.raw.buf.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

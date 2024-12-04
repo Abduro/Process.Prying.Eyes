@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="interface">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003004a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003004b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_prec">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003004c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resources">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003004d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resources\icons">
+      <UniqueIdentifier>{00000C13-EEEE-BBBB-6667-00000003004e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\_out.module.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\_prec\StdAfx.cpp">
+      <Filter>src\_prec</Filter>
+    </ClCompile>
+    <ClCompile Include="src\_out.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="interface\_out.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\_prec\StdAfx.h">
+      <Filter>src\_prec</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resources\_out.res.h">
+      <Filter>src\resources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="interface\_out.manifest">
+      <Filter>interface</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\resources\_out.res.rc">
+      <Filter>src\resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\resources\icons\tm.ln.custom.wtl.hack.ico">
+      <Filter>src\resources\icons</Filter>
+    </Image>
+    <Image Include="src\resources\icons\elle_s_eye_512px.ico">
+      <Filter>src\resources\icons</Filter>
+    </Image>
+    <Image Include="src\resources\icons\tm.ln.custom.fak.hack.ico">
+      <Filter>src\resources\icons</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

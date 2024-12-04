@@ -1,0 +1,81 @@
+#ifndef _SHAREDLOGJOURNAL_H_1871B7EC_A14A_4277_9775_8B33073C4AF1_INCLUDED
+#define _SHAREDLOGJOURNAL_H_1871B7EC_A14A_4277_9775_8B33073C4AF1_INCLUDED
+/*
+	Created by Tech_dog (ebontrop@gmail.com) on 9-Oct-2015 at 2:33:00pm, GMT+7, Phuket, Rawai, Friday;
+	This is Ebo Pack shared log library application event journal wrapper class declaration file.
+	-----------------------------------------------------------------------------
+	Adopted to v15 at 9-Jul-2018 at 8:25:17p, UTC+7, Phuket, Rawai, Monday;
+	Adopted to Process Prying Eyes project on 13-Feb-2023 at 01:44:01.6023592, UTC+7, Novosibirsk, Monday;
+*/
+#include "shared.classes.h"
+#include "shared.sys.err.h"
+#include "shared.sys.sync.h"
+
+#include "_out.record.h"         // just for record type declaration that makes easier to create assignment operators;
+
+#include "log.defs.h"
+
+namespace shared { namespace log
+{
+	using shared::sys_core::CSysError  ;
+	using shared::sys_core::string_t   ;
+	using shared::sys_core::CFormatter ;
+	using shared::sys_core::CSyncObject;
+
+	using _output::CRecord  ;
+	using _output::CRec_Err ;
+	using _output::CRec_Info;
+	using _output::CRec_Warn;
+
+	class CEventType {
+	public:
+		enum _value : WORD {
+			e_error   = EVENTLOG_ERROR_TYPE,
+			e_info    = EVENTLOG_INFORMATION_TYPE,
+			e_warning = EVENTLOG_WARNING_TYPE,
+		};
+	};
+
+	class CEventJournal {
+	public:
+		 CEventJournal(const CEventJournal&);
+		 CEventJournal(LPCTSTR _lp_sz_src);
+		~CEventJournal(void);
+
+	public:
+		void  Verbose (bool _b_value) ; // if true, timestamp will be put to event journal from input record objects;
+
+	public:
+		void  LogError(const TSysErrRef&) const;
+		void  LogError(LPCTSTR _lp_sz_fmt, ...) const; void LogError(UINT nResId, ...) const;
+		void  LogInfo (LPCTSTR _lp_sz_fmt, ...) const; void LogInfo (UINT nResId, ...) const;
+		void  LogWarn (LPCTSTR _lp_sz_fmt, ...) const; void LogWarn (UINT nResId, ...) const;
+
+	public:
+		void  LogError(const CRec_Err& ) const;
+		void  LogInfo (const CRec_Info&) const;
+		void  LogWarn (const CRec_Warn&) const;
+
+	public:
+		void  LogRec  (TRecordType, LPCTSTR _lp_sz_text) const;
+
+	public:
+		CEventJournal& operator = (const CEventJournal&);
+
+	public:
+		const CEventJournal& operator << (const string_t&) const;     // puts info;
+		const CEventJournal& operator << (LPCTSTR _p_sz_info) const;  // puts info;
+		const CEventJournal& operator >> (LPCTSTR _p_sz_warn) const;  // puts warning;
+		const CEventJournal& operator << (TSysErrRef) const;          // puts error;
+
+	public:
+		const CEventJournal& operator << (const CRec_Err& ) const;
+		const CEventJournal& operator << (const CRec_Info&) const;
+		const CEventJournal& operator << (const CRec_Warn&) const;
+
+	private:
+		string_t  m_evt_src; // used for output in the system event journal;
+	};
+}}
+
+#endif/*_SHAREDLOGJOURNAL_H_1871B7EC_A14A_4277_9775_8B33073C4AF1_INCLUDED*/
